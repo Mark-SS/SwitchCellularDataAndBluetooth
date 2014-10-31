@@ -8,8 +8,13 @@
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import <objc/runtime.h>
+
+extern BOOL CTCellularDataPlanGetIsEnabled();
+extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @interface TodayViewController () <NCWidgetProviding>
+@property (weak, nonatomic) IBOutlet UISwitch *switch1;
 
 @end
 
@@ -18,11 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.switch1.on = CTCellularDataPlanGetIsEnabled();
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)switchAction:(UISwitch *)sender {
+    NSLog(@"123");
+    CTCellularDataPlanSetIsEnabled(sender.on);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"aaa" object:self userInfo:@{@"switch": sender}];
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {

@@ -15,10 +15,10 @@
 extern BOOL CTCellularDataPlanGetIsEnabled();
 extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
-
 @interface GLViewController ()
 
 @property (nonatomic, strong) BluetoothManager *btCont;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
 
 @end
 
@@ -37,6 +37,15 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
         NSLog(@"_bluetooth.on = %d", _bluetooth.on);
     });
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(aaa:) name:@"aaa"
+                                               object:nil];
+    
+}
+
+- (void)aaa:(NSNotification *)notification {
+    UISwitch *switch1 = notification.userInfo[@"switch"];
+    [self switchMobileData:switch1];
 }
 
 

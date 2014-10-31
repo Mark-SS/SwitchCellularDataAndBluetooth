@@ -40,6 +40,12 @@
                                     <action selector="switchBlueTooth:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hFp-ZO-cxg"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-HU-Tvz">
+                                <rect key="frame" x="363" y="250" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,6 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="bluetooth" destination="UzY-ZJ-wiv" id="I0t-uX-2fk"/>
+                        <outlet property="label2" destination="1QD-HU-Tvz" id="kXm-jI-H4D"/>
                         <outlet property="mobileSwitch" destination="U9p-gh-Ir7" id="JWH-x0-XeL"/>
                     </connections>
                 </viewController>

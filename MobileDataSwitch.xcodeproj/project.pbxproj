@@ -16,6 +16,11 @@
 		3E9D075019E50FE1008C21CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D074F19E50FE1008C21CA /* Images.xcassets */; };
 		3E9D075319E50FE1008C21CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D075119E50FE1008C21CA /* LaunchScreen.xib */; };
 		3E9D075F19E50FE1008C21CA /* MobileDataSwitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */; };
+		3EFD83481A03825D0030FC5A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD83471A03825D0030FC5A /* NotificationCenter.framework */; };
+		3EFD834E1A03825D0030FC5A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD834D1A03825D0030FC5A /* TodayViewController.m */; };
+		3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */; };
+		3EFD83531A03825D0030FC5A /* MobileSwitch.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3EFD83451A03825D0030FC5A /* MobileSwitch.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3EFD835B1A038C4E0030FC5A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1F0CCF19E5119E0034C490 /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +31,28 @@
 			remoteGlobalIDString = 3E9D073E19E50FE1008C21CA;
 			remoteInfo = MobileDataSwitch;
 		};
+		3EFD83511A03825D0030FC5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E9D073719E50FE1008C21CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EFD83441A03825D0030FC5A;
+			remoteInfo = MobileSwitch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3EFD83571A03825D0030FC5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3EFD83531A03825D0030FC5A /* MobileSwitch.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3E1F0CCF19E5119E0034C490 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -44,6 +70,12 @@
 		3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9D075D19E50FE1008C21CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDataSwitchTests.m; sourceTree = "<group>"; };
+		3EFD83451A03825D0030FC5A /* MobileSwitch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MobileSwitch.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EFD83471A03825D0030FC5A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		3EFD834B1A03825D0030FC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFD834C1A03825D0030FC5A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		3EFD834D1A03825D0030FC5A /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +95,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EFD83421A03825D0030FC5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFD835B1A038C4E0030FC5A /* CoreTelephony.framework in Frameworks */,
+				3EFD83481A03825D0030FC5A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +114,8 @@
 				3E1F0CCF19E5119E0034C490 /* CoreTelephony.framework */,
 				3E9D074119E50FE1008C21CA /* MobileDataSwitch */,
 				3E9D075B19E50FE1008C21CA /* MobileDataSwitchTests */,
+				3EFD83491A03825D0030FC5A /* MobileSwitch */,
+				3EFD83461A03825D0030FC5A /* Frameworks */,
 				3E9D074019E50FE1008C21CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +125,7 @@
 			children = (
 				3E9D073F19E50FE1008C21CA /* MobileDataSwitch.app */,
 				3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */,
+				3EFD83451A03825D0030FC5A /* MobileSwitch.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +171,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3EFD83461A03825D0030FC5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD83471A03825D0030FC5A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EFD83491A03825D0030FC5A /* MobileSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD834C1A03825D0030FC5A /* TodayViewController.h */,
+				3EFD834D1A03825D0030FC5A /* TodayViewController.m */,
+				3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */,
+				3EFD834A1A03825D0030FC5A /* Supporting Files */,
+			);
+			path = MobileSwitch;
+			sourceTree = "<group>";
+		};
+		3EFD834A1A03825D0030FC5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD834B1A03825D0030FC5A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +208,12 @@
 				3E9D073B19E50FE1008C21CA /* Sources */,
 				3E9D073C19E50FE1008C21CA /* Frameworks */,
 				3E9D073D19E50FE1008C21CA /* Resources */,
+				3EFD83571A03825D0030FC5A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3EFD83521A03825D0030FC5A /* PBXTargetDependency */,
 			);
 			name = MobileDataSwitch;
 			productName = MobileDataSwitch;
@@ -165,6 +238,23 @@
 			productReference = 3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3EFD83441A03825D0030FC5A /* MobileSwitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EFD83561A03825D0030FC5A /* Build configuration list for PBXNativeTarget "MobileSwitch" */;
+			buildPhases = (
+				3EFD83411A03825D0030FC5A /* Sources */,
+				3EFD83421A03825D0030FC5A /* Frameworks */,
+				3EFD83431A03825D0030FC5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileSwitch;
+			productName = MobileSwitch;
+			productReference = 3EFD83451A03825D0030FC5A /* MobileSwitch.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +270,9 @@
 					3E9D075719E50FE1008C21CA = {
 						CreatedOnToolsVersion = 6.0.1;
 						TestTargetID = 3E9D073E19E50FE1008C21CA;
+					};
+					3EFD83441A03825D0030FC5A = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -198,6 +291,7 @@
 			targets = (
 				3E9D073E19E50FE1008C21CA /* MobileDataSwitch */,
 				3E9D075719E50FE1008C21CA /* MobileDataSwitchTests */,
+				3EFD83441A03825D0030FC5A /* MobileSwitch */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +311,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EFD83431A03825D0030FC5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +343,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EFD83411A03825D0030FC5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFD834E1A03825D0030FC5A /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -248,6 +358,11 @@
 			isa = PBXTargetDependency;
 			target = 3E9D073E19E50FE1008C21CA /* MobileDataSwitch */;
 			targetProxy = 3E9D075919E50FE1008C21CA /* PBXContainerItemProxy */;
+		};
+		3EFD83521A03825D0030FC5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EFD83441A03825D0030FC5A /* MobileSwitch */;
+			targetProxy = 3EFD83511A03825D0030FC5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -409,6 +524,34 @@
 			};
 			name = Release;
 		};
+		3EFD83541A03825D0030FC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileSwitch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		3EFD83551A03825D0030FC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MobileSwitch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +581,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3EFD83561A03825D0030FC5A /* Build configuration list for PBXNativeTarget "MobileSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EFD83541A03825D0030FC5A /* Debug */,
+				3EFD83551A03825D0030FC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
