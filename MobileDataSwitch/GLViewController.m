@@ -8,10 +8,13 @@
 
 #import "GLViewController.h"
 #import <BluetoothManager/BluetoothManager.h>
-
+#import <MobileWiFi/MobileWiFi.h>
+#import <objc/runtime.h>
+//#import <SpringBoard/SBCCWiFiSetting.h>
 
 extern BOOL CTCellularDataPlanGetIsEnabled();
 extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
+
 
 @interface GLViewController ()
 
@@ -34,9 +37,8 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
         NSLog(@"_bluetooth.on = %d", _bluetooth.on);
     });
     
-    
-//    [[_SBWifiManager sharedInstance] setWiFiEnabled:NO];
 }
+
 
 - (IBAction)switchMobileData:(UISwitch *)sender {
     CTCellularDataPlanSetIsEnabled(sender.on);
