@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -16,24 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-oW-Jbb">
-                                <rect key="frame" x="207" y="16" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchAction:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="Kti-wH-oGO"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蜂窝数据" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="23" y="21" width="68" height="21"/>
+                                <rect key="frame" x="16" y="21" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0kT-6U-1Uz"/>
+                                    <constraint firstAttribute="width" constant="68" id="vfI-5J-0Dr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-oW-Jbb">
+                                <rect key="frame" x="245" y="16" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="LLn-bm-ROm"/>
+                                    <constraint firstAttribute="height" constant="31" id="xkg-16-ECE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchAction:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="Kti-wH-oGO"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="1Ee-oW-Jbb" secondAttribute="centerY" constant="-1.5" id="5Cv-Re-0qB"/>
-                            <constraint firstAttribute="centerX" secondItem="1Ee-oW-Jbb" secondAttribute="centerX" constant="-71.5" id="QAy-jA-0fi"/>
-                            <constraint firstAttribute="centerX" secondItem="GcN-lo-r42" secondAttribute="centerX" constant="103" id="bno-N1-6vQ"/>
-                            <constraint firstAttribute="centerY" secondItem="GcN-lo-r42" secondAttribute="centerY" constant="-0.5" id="dl7-W3-jFi"/>
+                            <constraint firstItem="1Ee-oW-Jbb" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="16" id="63f-AL-N67"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="21" id="JoM-SY-KkA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ee-oW-Jbb" secondAttribute="trailing" constant="10" id="ark-Ys-jlT"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="tSl-x1-8Hv"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

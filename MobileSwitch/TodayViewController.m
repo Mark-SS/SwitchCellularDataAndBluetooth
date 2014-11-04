@@ -23,6 +23,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.preferredContentSize = CGSizeMake(0, 50);
     self.switch1.on = CTCellularDataPlanGetIsEnabled();
 }
 
@@ -32,9 +33,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 }
 
 - (IBAction)switchAction:(UISwitch *)sender {
-    NSLog(@"123");
     CTCellularDataPlanSetIsEnabled(sender.on);
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"aaa" object:self userInfo:@{@"switch": sender}];
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
