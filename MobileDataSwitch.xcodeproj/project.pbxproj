@@ -16,6 +16,7 @@
 		3E9D075019E50FE1008C21CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D074F19E50FE1008C21CA /* Images.xcassets */; };
 		3E9D075319E50FE1008C21CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D075119E50FE1008C21CA /* LaunchScreen.xib */; };
 		3E9D075F19E50FE1008C21CA /* MobileDataSwitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */; };
+		3EF4522E1A08B24E00C822F3 /* MoblieSwitch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */; };
 		3EFD83481A03825D0030FC5A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD83471A03825D0030FC5A /* NotificationCenter.framework */; };
 		3EFD834E1A03825D0030FC5A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD834D1A03825D0030FC5A /* TodayViewController.m */; };
 		3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */; };
@@ -70,6 +71,9 @@
 		3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9D075D19E50FE1008C21CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDataSwitchTests.m; sourceTree = "<group>"; };
+		3EF452281A08A26F00C822F3 /* MobileSwitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MobileSwitch.entitlements; sourceTree = "<group>"; };
+		3EF452291A08A2B500C822F3 /* MobileDataSwitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MobileDataSwitch.entitlements; sourceTree = "<group>"; };
+		3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoblieSwitch.xcassets; sourceTree = "<group>"; };
 		3EFD83451A03825D0030FC5A /* MobileSwitch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MobileSwitch.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFD83471A03825D0030FC5A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		3EFD834B1A03825D0030FC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		3E9D074119E50FE1008C21CA /* MobileDataSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				3EF452291A08A2B500C822F3 /* MobileDataSwitch.entitlements */,
 				3E9D074619E50FE1008C21CA /* AppDelegate.h */,
 				3E9D074719E50FE1008C21CA /* AppDelegate.m */,
 				3E9D074919E50FE1008C21CA /* GLViewController.h */,
@@ -182,8 +187,10 @@
 		3EFD83491A03825D0030FC5A /* MobileSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				3EF452281A08A26F00C822F3 /* MobileSwitch.entitlements */,
 				3EFD834C1A03825D0030FC5A /* TodayViewController.h */,
 				3EFD834D1A03825D0030FC5A /* TodayViewController.m */,
+				3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */,
 				3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */,
 				3EFD834A1A03825D0030FC5A /* Supporting Files */,
 			);
@@ -266,6 +273,12 @@
 				TargetAttributes = {
 					3E9D073E19E50FE1008C21CA = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = B394B8PA37;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3E9D075719E50FE1008C21CA = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -273,6 +286,12 @@
 					};
 					3EFD83441A03825D0030FC5A = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = B394B8PA37;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -319,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */,
+				3EF4522E1A08B24E00C822F3 /* MoblieSwitch.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +486,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -473,6 +495,7 @@
 				INFOPLIST_FILE = MobileDataSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -480,6 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -487,6 +512,7 @@
 				INFOPLIST_FILE = MobileDataSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -527,6 +553,9 @@
 		3EFD83541A03825D0030FC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MobileSwitch/MobileSwitch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -535,6 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -543,10 +573,14 @@
 		3EFD83551A03825D0030FC5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MobileSwitch/MobileSwitch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MobileSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -589,6 +623,7 @@
 				3EFD83551A03825D0030FC5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

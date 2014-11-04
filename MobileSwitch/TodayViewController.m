@@ -4,7 +4,7 @@
 //
 //  Created by gongliang on 14/10/31.
 //  Copyright (c) 2014年 GL. All rights reserved.
-//
+//  widget
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
@@ -15,6 +15,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @interface TodayViewController () <NCWidgetProviding>
 @property (weak, nonatomic) IBOutlet UISwitch *switch1;
+@property (weak, nonatomic) IBOutlet UIButton *locationButton;
 
 @end
 
@@ -23,7 +24,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.preferredContentSize = CGSizeMake(0, 50);
+    self.preferredContentSize = CGSizeMake(0, 100);
     self.switch1.on = CTCellularDataPlanGetIsEnabled();
 }
 
@@ -34,6 +35,37 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 - (IBAction)switchAction:(UISwitch *)sender {
     CTCellularDataPlanSetIsEnabled(sender.on);
+  
+}
+
+- (IBAction)wifiAction:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=WIFI"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)location:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)blueTooth:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)private:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=Privacy"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)dosage:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=REMINDERS"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)disturbance:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=DO_NOT_DISTURB"];
+    [self.extensionContext openURL:url completionHandler:nil];
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
