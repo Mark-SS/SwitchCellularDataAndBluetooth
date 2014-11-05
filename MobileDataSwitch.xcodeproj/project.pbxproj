@@ -491,7 +491,8 @@
 				INFOPLIST_FILE = MobileDataSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a56cfad5-5cac-4aab-bcb1-b694e8d8914d";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -508,7 +509,8 @@
 				INFOPLIST_FILE = MobileDataSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a56cfad5-5cac-4aab-bcb1-b694e8d8914d";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -560,7 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a56cfad5-5cac-4aab-bcb1-b694e8d8914d";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -576,7 +578,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a56cfad5-5cac-4aab-bcb1-b694e8d8914d";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
