@@ -10,6 +10,8 @@
 #import <NotificationCenter/NotificationCenter.h>
 #import <objc/runtime.h>
 
+static CGFloat kDefaultHeight = 150.0f;
+
 extern BOOL CTCellularDataPlanGetIsEnabled();
 extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
@@ -24,7 +26,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.preferredContentSize = CGSizeMake(0, 100);
+    self.preferredContentSize = CGSizeMake(0, kDefaultHeight );
     self.switch1.on = CTCellularDataPlanGetIsEnabled();
 }
 
@@ -65,6 +67,11 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 - (IBAction)disturbance:(id)sender {
     NSURL *url = [NSURL URLWithString:@"prefs:root=DO_NOT_DISTURB"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)shareNewwork:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"prefs:root=INTERNET_TETHERING"];
     [self.extensionContext openURL:url completionHandler:nil];
 }
 

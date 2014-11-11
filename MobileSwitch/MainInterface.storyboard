@@ -78,7 +78,7 @@
                                     <action selector="dosage:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="cQe-Or-bNj"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqM-Y8-Aqc">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqM-Y8-Aqc">
                                 <rect key="frame" x="79" y="105" width="80" height="40"/>
                                 <state key="normal" title="勿扰模式">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,9 +94,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8n-nc-Ufm">
+                                <rect key="frame" x="0.0" y="109" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="ZNZ-fX-Hq8"/>
+                                    <constraint firstAttribute="height" constant="36" id="xMh-9O-fad"/>
+                                </constraints>
+                                <state key="normal" image="shareNetwork">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareNewwork:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="kEU-aA-nnx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Exu-Bz-Wo5" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="59" id="5Fb-LJ-5VQ"/>
+                            <constraint firstItem="f8n-nc-Ufm" firstAttribute="bottom" secondItem="SqM-Y8-Aqc" secondAttribute="bottom" id="9XA-W3-Yxm"/>
                             <constraint firstItem="swc-9v-gT6" firstAttribute="top" secondItem="R3E-nL-Zr9" secondAttribute="top" constant="1" id="A8r-69-dCE"/>
                             <constraint firstItem="swc-9v-gT6" firstAttribute="top" secondItem="Exu-Bz-Wo5" secondAttribute="top" id="JBP-GL-ncO"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="Nzw-Si-MyF"/>
@@ -104,11 +119,15 @@
                             <constraint firstItem="Exu-Bz-Wo5" firstAttribute="leading" secondItem="fb3-9M-qbS" secondAttribute="trailing" constant="24" id="VjF-93-rsY"/>
                             <constraint firstAttribute="centerX" secondItem="Exu-Bz-Wo5" secondAttribute="centerX" id="aE4-7F-D47"/>
                             <constraint firstItem="1Ee-oW-Jbb" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="138" id="aav-Y4-EGs"/>
+                            <constraint firstItem="f8n-nc-Ufm" firstAttribute="top" secondItem="8Pe-vY-8xp" secondAttribute="bottom" constant="14" id="gFh-cu-fFO"/>
+                            <constraint firstItem="SqM-Y8-Aqc" firstAttribute="leading" secondItem="f8n-nc-Ufm" secondAttribute="trailing" constant="43" id="if8-kb-wdm"/>
                             <constraint firstItem="1Ee-oW-Jbb" firstAttribute="centerY" secondItem="GcN-lo-r42" secondAttribute="centerY" id="j1R-JC-vbk"/>
                             <constraint firstItem="fb3-9M-qbS" firstAttribute="leading" secondItem="8Pe-vY-8xp" secondAttribute="trailing" constant="16" id="kAn-yS-eRe"/>
                             <constraint firstItem="fb3-9M-qbS" firstAttribute="top" secondItem="8Pe-vY-8xp" secondAttribute="top" constant="2" id="o44-9L-FHI"/>
+                            <constraint firstItem="f8n-nc-Ufm" firstAttribute="leading" secondItem="8Pe-vY-8xp" secondAttribute="leading" id="pOw-7Z-oFv"/>
                             <constraint firstItem="Exu-Bz-Wo5" firstAttribute="top" secondItem="fb3-9M-qbS" secondAttribute="top" constant="-2" id="pmb-dt-d0H"/>
                             <constraint firstItem="R3E-nL-Zr9" firstAttribute="leading" secondItem="swc-9v-gT6" secondAttribute="trailing" constant="19" id="w5V-eV-LSx"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="f8n-nc-Ufm" secondAttribute="bottom" constant="5" id="xbc-wi-taV"/>
                             <constraint firstItem="swc-9v-gT6" firstAttribute="leading" secondItem="Exu-Bz-Wo5" secondAttribute="trailing" constant="14" id="xlu-5q-E5a"/>
                         </constraints>
                     </view>
@@ -133,6 +152,7 @@
         <image name="location" width="36" height="36"/>
         <image name="private" width="36" height="39"/>
         <image name="remind" width="36" height="36"/>
+        <image name="shareNetwork" width="36" height="36"/>
         <image name="wifi" width="36" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
