@@ -37,7 +37,6 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 - (IBAction)switchAction:(UISwitch *)sender {
     CTCellularDataPlanSetIsEnabled(sender.on);
-  
 }
 
 - (IBAction)wifiAction:(id)sender {
