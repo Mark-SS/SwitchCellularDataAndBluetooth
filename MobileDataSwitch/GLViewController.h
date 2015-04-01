@@ -10,8 +10,5 @@
 
 @interface GLViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISwitch *mobileSwitch;
-@property (weak, nonatomic) IBOutlet UISwitch *bluetooth;
-
 @end
 
