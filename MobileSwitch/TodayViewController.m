@@ -8,6 +8,7 @@
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import <BluetoothManager/BluetoothManager.h>
 #import <objc/runtime.h>
 
 static CGFloat kDefaultHeight = 150.0f;
@@ -16,8 +17,10 @@ extern BOOL CTCellularDataPlanGetIsEnabled();
 extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @interface TodayViewController () <NCWidgetProviding>
-@property (weak, nonatomic) IBOutlet UISwitch *switch1;
+@property (weak, nonatomic) IBOutlet UISwitch *mobileDataSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *blueToothSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
+@property (nonatomic, strong) BluetoothManager *btCont;
 
 @end
 
@@ -27,7 +30,11 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.preferredContentSize = CGSizeMake(0, kDefaultHeight );
-    self.switch1.on = CTCellularDataPlanGetIsEnabled();
+    self.mobileDataSwitch.on = CTCellularDataPlanGetIsEnabled();
+    _btCont = [BluetoothManager sharedInstance];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        _blueToothSwitch.on = _btCont.enabled;
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,8 +42,13 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switchAction:(UISwitch *)sender {
+- (IBAction)switchMobileData:(UISwitch *)sender {
     CTCellularDataPlanSetIsEnabled(sender.on);
+}
+
+- (IBAction)switchBlueTooth:(UISwitch *)sender {
+    [_btCont setEnabled:sender.on];
+    [_btCont setPowered:sender.on];
 }
 
 - (IBAction)wifiAction:(id)sender {

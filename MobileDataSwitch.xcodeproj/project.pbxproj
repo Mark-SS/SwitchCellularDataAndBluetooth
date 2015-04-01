@@ -22,6 +22,7 @@
 		3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */; };
 		3EFD83531A03825D0030FC5A /* MobileSwitch.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3EFD83451A03825D0030FC5A /* MobileSwitch.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3EFD835B1A038C4E0030FC5A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1F0CCF19E5119E0034C490 /* CoreTelephony.framework */; };
+		4854D4EA1ACC36E600C88487 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1F0CD119E51A7E0034C490 /* BluetoothManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4854D4EA1ACC36E600C88487 /* BluetoothManager.framework in Frameworks */,
 				3EFD835B1A038C4E0030FC5A /* CoreTelephony.framework in Frameworks */,
 				3EFD83481A03825D0030FC5A /* NotificationCenter.framework in Frameworks */,
 			);
@@ -554,6 +556,10 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -574,6 +580,10 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MobileSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
