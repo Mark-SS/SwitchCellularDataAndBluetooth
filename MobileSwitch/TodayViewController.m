@@ -9,7 +9,7 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import <objc/runtime.h>
-#import "GLBlueController.h"
+#import "GLBluetoothController.h"
 
 
 static CGFloat kDefaultHeight = 150.0f;
@@ -21,7 +21,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 @property (weak, nonatomic) IBOutlet UISwitch *mobileDataSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *blueToothSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
-@property (nonatomic, strong) GLBlueController *btCont;
+@property (nonatomic, strong) GLBluetoothController *btCont;
 
 @end
 
@@ -32,7 +32,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     // Do any additional setup after loading the view from its nib.
     self.preferredContentSize = CGSizeMake(0, kDefaultHeight );
     self.mobileDataSwitch.on = CTCellularDataPlanGetIsEnabled();
-    _btCont = [GLBlueController sharedInstance];
+    _btCont = [GLBluetoothController sharedInstance];
     _blueToothSwitch.on = _btCont.enabled;
 }
 

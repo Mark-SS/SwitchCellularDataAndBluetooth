@@ -14,24 +14,16 @@
 		3E9D074E19E50FE1008C21CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D074C19E50FE1008C21CA /* Main.storyboard */; };
 		3E9D075019E50FE1008C21CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D074F19E50FE1008C21CA /* Images.xcassets */; };
 		3E9D075319E50FE1008C21CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D075119E50FE1008C21CA /* LaunchScreen.xib */; };
-		3E9D075F19E50FE1008C21CA /* MobileDataSwitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */; };
 		3EF4522E1A08B24E00C822F3 /* MoblieSwitch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */; };
 		3EFD83481A03825D0030FC5A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD83471A03825D0030FC5A /* NotificationCenter.framework */; };
 		3EFD834E1A03825D0030FC5A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD834D1A03825D0030FC5A /* TodayViewController.m */; };
 		3EFD83501A03825D0030FC5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */; };
 		3EFD83531A03825D0030FC5A /* MobileSwitch.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3EFD83451A03825D0030FC5A /* MobileSwitch.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3EFD835B1A038C4E0030FC5A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1F0CCF19E5119E0034C490 /* CoreTelephony.framework */; };
-		488AFFEF1ACD41C5008E1ED1 /* GLBlueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488AFFEE1ACD41C5008E1ED1 /* GLBlueController.m */; };
+		488AFFEF1ACD41C5008E1ED1 /* GLBluetoothController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488AFFEE1ACD41C5008E1ED1 /* GLBluetoothController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E9D075919E50FE1008C21CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E9D073719E50FE1008C21CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E9D073E19E50FE1008C21CA;
-			remoteInfo = MobileDataSwitch;
-		};
 		3EFD83511A03825D0030FC5A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3E9D073719E50FE1008C21CA /* Project object */;
@@ -67,7 +59,6 @@
 		3E9D074D19E50FE1008C21CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E9D074F19E50FE1008C21CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E9D075219E50FE1008C21CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9D075D19E50FE1008C21CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E9D075E19E50FE1008C21CA /* MobileDataSwitchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDataSwitchTests.m; sourceTree = "<group>"; };
 		3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoblieSwitch.xcassets; sourceTree = "<group>"; };
@@ -77,8 +68,8 @@
 		3EFD834C1A03825D0030FC5A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		3EFD834D1A03825D0030FC5A /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		488AFFED1ACD41C5008E1ED1 /* GLBlueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBlueController.h; sourceTree = "<group>"; };
-		488AFFEE1ACD41C5008E1ED1 /* GLBlueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBlueController.m; sourceTree = "<group>"; };
+		488AFFED1ACD41C5008E1ED1 /* GLBluetoothController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBluetoothController.h; sourceTree = "<group>"; };
+		488AFFEE1ACD41C5008E1ED1 /* GLBluetoothController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBluetoothController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E1F0CD019E5119E0034C490 /* CoreTelephony.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E9D075519E50FE1008C21CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				3E9D073F19E50FE1008C21CA /* MobileDataSwitch.app */,
-				3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */,
 				3EFD83451A03825D0030FC5A /* MobileSwitch.appex */,
 			);
 			name = Products;
@@ -185,8 +168,8 @@
 			children = (
 				3EFD834C1A03825D0030FC5A /* TodayViewController.h */,
 				3EFD834D1A03825D0030FC5A /* TodayViewController.m */,
-				488AFFED1ACD41C5008E1ED1 /* GLBlueController.h */,
-				488AFFEE1ACD41C5008E1ED1 /* GLBlueController.m */,
+				488AFFED1ACD41C5008E1ED1 /* GLBluetoothController.h */,
+				488AFFEE1ACD41C5008E1ED1 /* GLBluetoothController.m */,
 				3EF4522D1A08B24E00C822F3 /* MoblieSwitch.xcassets */,
 				3EFD834F1A03825D0030FC5A /* MainInterface.storyboard */,
 				3EFD834A1A03825D0030FC5A /* Supporting Files */,
@@ -224,24 +207,6 @@
 			productReference = 3E9D073F19E50FE1008C21CA /* MobileDataSwitch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3E9D075719E50FE1008C21CA /* MobileDataSwitchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E9D076519E50FE1008C21CA /* Build configuration list for PBXNativeTarget "MobileDataSwitchTests" */;
-			buildPhases = (
-				3E9D075419E50FE1008C21CA /* Sources */,
-				3E9D075519E50FE1008C21CA /* Frameworks */,
-				3E9D075619E50FE1008C21CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3E9D075A19E50FE1008C21CA /* PBXTargetDependency */,
-			);
-			name = MobileDataSwitchTests;
-			productName = MobileDataSwitchTests;
-			productReference = 3E9D075819E50FE1008C21CA /* MobileDataSwitchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		3EFD83441A03825D0030FC5A /* MobileSwitch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EFD83561A03825D0030FC5A /* Build configuration list for PBXNativeTarget "MobileSwitch" */;
@@ -276,10 +241,6 @@
 							};
 						};
 					};
-					3E9D075719E50FE1008C21CA = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 3E9D073E19E50FE1008C21CA;
-					};
 					3EFD83441A03825D0030FC5A = {
 						CreatedOnToolsVersion = 6.1;
 						SystemCapabilities = {
@@ -304,7 +265,6 @@
 			projectRoot = "";
 			targets = (
 				3E9D073E19E50FE1008C21CA /* MobileDataSwitch */,
-				3E9D075719E50FE1008C21CA /* MobileDataSwitchTests */,
 				3EFD83441A03825D0030FC5A /* MobileSwitch */,
 			);
 		};
@@ -318,13 +278,6 @@
 				3E9D074E19E50FE1008C21CA /* Main.storyboard in Resources */,
 				3E9D075319E50FE1008C21CA /* LaunchScreen.xib in Resources */,
 				3E9D075019E50FE1008C21CA /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E9D075619E50FE1008C21CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,19 +303,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E9D075419E50FE1008C21CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E9D075F19E50FE1008C21CA /* MobileDataSwitchTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3EFD83411A03825D0030FC5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				488AFFEF1ACD41C5008E1ED1 /* GLBlueController.m in Sources */,
+				488AFFEF1ACD41C5008E1ED1 /* GLBluetoothController.m in Sources */,
 				3EFD834E1A03825D0030FC5A /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,11 +315,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3E9D075A19E50FE1008C21CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3E9D073E19E50FE1008C21CA /* MobileDataSwitch */;
-			targetProxy = 3E9D075919E50FE1008C21CA /* PBXContainerItemProxy */;
-		};
 		3EFD83521A03825D0030FC5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3EFD83441A03825D0030FC5A /* MobileSwitch */;
@@ -419,7 +359,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -460,7 +400,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -482,8 +422,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -500,8 +440,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -514,46 +454,12 @@
 			};
 			name = Release;
 		};
-		3E9D076619E50FE1008C21CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MobileDataSwitchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileDataSwitch.app/MobileDataSwitch";
-			};
-			name = Debug;
-		};
-		3E9D076719E50FE1008C21CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MobileDataSwitchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileDataSwitch.app/MobileDataSwitch";
-			};
-			name = Release;
-		};
 		3EFD83541A03825D0030FC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -563,7 +469,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MobileSwitch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -576,14 +482,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MobileSwitch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -609,15 +515,6 @@
 			buildConfigurations = (
 				3E9D076319E50FE1008C21CA /* Debug */,
 				3E9D076419E50FE1008C21CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3E9D076519E50FE1008C21CA /* Build configuration list for PBXNativeTarget "MobileDataSwitchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E9D076619E50FE1008C21CA /* Debug */,
-				3E9D076719E50FE1008C21CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

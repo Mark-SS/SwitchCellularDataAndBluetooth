@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 GL. All rights reserved.
 //
 
-#import "GLBlueController.h"
+#import "GLBluetoothController.h"
 
 @interface PrivateApi_BlutToothManager
 
@@ -14,11 +14,11 @@
 @property (assign, nonatomic) BOOL powered;
 @end
 
-@interface GLBlueController ()
+@interface GLBluetoothController ()
 
 @end
 
-@implementation GLBlueController {
+@implementation GLBluetoothController {
     PrivateApi_BlutToothManager *_blueTooth;
 }
 

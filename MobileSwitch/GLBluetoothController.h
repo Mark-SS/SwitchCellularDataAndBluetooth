@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GLBlueController : NSObject
+@interface GLBluetoothController : NSObject
 
 + (instancetype)sharedInstance;
 
