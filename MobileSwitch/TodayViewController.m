@@ -32,9 +32,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     self.preferredContentSize = CGSizeMake(0, kDefaultHeight );
     self.mobileDataSwitch.on = CTCellularDataPlanGetIsEnabled();
     _btCont = [BluetoothManager sharedInstance];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        _blueToothSwitch.on = _btCont.enabled;
-    });
+    _blueToothSwitch.on = _btCont.enabled;
 }
 
 - (void)didReceiveMemoryWarning {
