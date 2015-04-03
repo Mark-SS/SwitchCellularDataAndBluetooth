@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -14,19 +13,13 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-oW-Jbb">
                                 <rect key="frame" x="191" y="4" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchMobileData:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="lPs-8m-gCI"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-JK-33a">
-                                <rect key="frame" x="191" y="44" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchBlueTooth:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="TE7-EH-5c0"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蜂窝数据" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
@@ -39,94 +32,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蓝牙" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-Le-tZ7">
-                                <rect key="frame" x="23" y="51" width="32" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pe-vY-8xp">
-                                <rect key="frame" x="20" y="102" width="38" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8Pe-vY-8xp" secondAttribute="height" multiplier="1:1" id="Mi2-Gr-988"/>
-                                </constraints>
-                                <state key="normal" image="wifi">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="wifiAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="VVV-sm-Jia"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-9M-qbS">
-                                <rect key="frame" x="64" y="102" width="39" height="38"/>
-                                <state key="normal" image="location">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="location:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="00O-ax-L9h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swc-9v-gT6">
-                                <rect key="frame" x="153" y="102" width="39" height="38"/>
-                                <state key="normal" image="shareNetwork">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareNewwork:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gJr-gY-fKq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exu-Bz-Wo5">
-                                <rect key="frame" x="109" y="102" width="38" height="38"/>
-                                <state key="normal" image="remind">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dosage:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="cQe-Or-bNj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3E-nL-Zr9">
-                                <rect key="frame" x="197" y="102" width="38" height="38"/>
-                                <state key="normal" image="private">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="private:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="pJh-aS-n5K"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Exu-Bz-Wo5" firstAttribute="width" secondItem="fb3-9M-qbS" secondAttribute="width" id="7dX-rr-oao"/>
                             <constraint firstAttribute="trailing" secondItem="1Ee-oW-Jbb" secondAttribute="trailing" constant="20" id="C4W-Of-Rfi"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="centerY" secondItem="fb3-9M-qbS" secondAttribute="centerY" id="GFp-UE-QuC"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="width" secondItem="R3E-nL-Zr9" secondAttribute="width" id="IRA-z7-sym"/>
-                            <constraint firstItem="swc-9v-gT6" firstAttribute="centerY" secondItem="Exu-Bz-Wo5" secondAttribute="centerY" id="JrE-uu-GVK"/>
-                            <constraint firstItem="Exu-Bz-Wo5" firstAttribute="centerY" secondItem="fb3-9M-qbS" secondAttribute="centerY" id="L9k-72-88X"/>
-                            <constraint firstItem="DLA-JK-33a" firstAttribute="centerX" secondItem="R3E-nL-Zr9" secondAttribute="centerX" id="LsM-bv-NEo"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="M5a-ii-6rj"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="height" secondItem="R3E-nL-Zr9" secondAttribute="height" id="NFK-wd-pct"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="SpJ-RX-ngF"/>
-                            <constraint firstItem="R3E-nL-Zr9" firstAttribute="leading" secondItem="swc-9v-gT6" secondAttribute="trailing" constant="6" id="VEp-dq-xdw"/>
-                            <constraint firstItem="YAz-Le-tZ7" firstAttribute="centerX" secondItem="GcN-lo-r42" secondAttribute="centerX" constant="-3" id="VWa-oG-EVl"/>
-                            <constraint firstItem="swc-9v-gT6" firstAttribute="width" secondItem="Exu-Bz-Wo5" secondAttribute="width" id="Z3H-lK-G1q"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="width" secondItem="fb3-9M-qbS" secondAttribute="width" id="aQB-vU-d66"/>
-                            <constraint firstItem="DLA-JK-33a" firstAttribute="centerX" secondItem="1Ee-oW-Jbb" secondAttribute="centerX" id="amx-J6-tGk"/>
-                            <constraint firstItem="YAz-Le-tZ7" firstAttribute="centerX" secondItem="8Pe-vY-8xp" secondAttribute="centerX" id="e0t-8i-IGB"/>
                             <constraint firstItem="1Ee-oW-Jbb" firstAttribute="centerY" secondItem="GcN-lo-r42" secondAttribute="centerY" id="hjo-Wd-2vB"/>
-                            <constraint firstItem="fb3-9M-qbS" firstAttribute="leading" secondItem="8Pe-vY-8xp" secondAttribute="trailing" constant="6" id="m2G-Gx-HDf"/>
-                            <constraint firstItem="Exu-Bz-Wo5" firstAttribute="height" secondItem="fb3-9M-qbS" secondAttribute="height" id="mDZ-J1-QWC"/>
-                            <constraint firstItem="DLA-JK-33a" firstAttribute="top" secondItem="1Ee-oW-Jbb" secondAttribute="bottom" constant="9" id="pmt-pD-4Sf"/>
-                            <constraint firstItem="swc-9v-gT6" firstAttribute="leading" secondItem="Exu-Bz-Wo5" secondAttribute="trailing" constant="6" id="sme-qc-eLM"/>
-                            <constraint firstItem="Exu-Bz-Wo5" firstAttribute="leading" secondItem="fb3-9M-qbS" secondAttribute="trailing" constant="6" id="uiC-DT-tQn"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="height" secondItem="fb3-9M-qbS" secondAttribute="height" id="v2Z-mg-zdD"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="8Pe-vY-8xp" secondAttribute="bottom" constant="10" id="v7V-rc-v7a"/>
-                            <constraint firstItem="8Pe-vY-8xp" firstAttribute="centerY" secondItem="R3E-nL-Zr9" secondAttribute="centerY" id="w4W-9H-A7U"/>
-                            <constraint firstItem="swc-9v-gT6" firstAttribute="height" secondItem="Exu-Bz-Wo5" secondAttribute="height" id="y9t-RB-FFh"/>
-                            <constraint firstItem="YAz-Le-tZ7" firstAttribute="centerY" secondItem="DLA-JK-33a" secondAttribute="centerY" constant="0.5" id="yIe-X8-FBT"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -134,10 +45,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="260" height="150"/>
+                    <size key="freeformSize" width="260" height="50"/>
                     <connections>
-                        <outlet property="blueToothSwitch" destination="DLA-JK-33a" id="Lna-uE-Ijf"/>
-                        <outlet property="locationButton" destination="fb3-9M-qbS" id="PEF-W0-8Pb"/>
                         <outlet property="mobileDataSwitch" destination="1Ee-oW-Jbb" id="zzH-2X-Rm5"/>
                     </connections>
                 </viewController>
@@ -146,13 +55,6 @@
             <point key="canvasLocation" x="516" y="284"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="location" width="36" height="36"/>
-        <image name="private" width="36" height="39"/>
-        <image name="remind" width="36" height="36"/>
-        <image name="shareNetwork" width="36" height="36"/>
-        <image name="wifi" width="36" height="32"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
