@@ -12,7 +12,7 @@
 #import "GLBluetoothController.h"
 
 
-static CGFloat kDefaultHeight = 25.0f;
+static CGFloat kDefaultHeight = 48.0f;
 
 extern BOOL CTCellularDataPlanGetIsEnabled();
 extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
@@ -31,7 +31,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"self.view = %@", self.view);
-//    self.preferredContentSize = CGSizeMake(0, kDefaultHeight);
+    self.preferredContentSize = CGSizeMake(0, kDefaultHeight);
     [self.view bringSubviewToFront:self.mobileDataSwitch];
     self.mobileDataSwitch.on = CTCellularDataPlanGetIsEnabled();
     _btCont = [GLBluetoothController sharedInstance];
@@ -39,7 +39,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 }
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
-    return UIEdgeInsetsMake(10, 20, -10, 0);
+    return UIEdgeInsetsMake(5, 20, -5, 0);
 }
 
 - (void)didReceiveMemoryWarning {
