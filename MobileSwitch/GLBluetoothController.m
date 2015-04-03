@@ -8,7 +8,7 @@
 
 #import "GLBluetoothController.h"
 
-@interface PrivateApi_BlutToothManager
+@interface PrivateApi_BluetoothManager
 
 @property (assign, nonatomic) BOOL enabled;
 @property (assign, nonatomic) BOOL powered;
@@ -19,7 +19,7 @@
 @end
 
 @implementation GLBluetoothController {
-    PrivateApi_BlutToothManager *_blueTooth;
+    PrivateApi_BluetoothManager *_blueTooth;
 }
 
 @synthesize enabled = _enabled, powered = _powered;
